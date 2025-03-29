@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="quiz-container" id="welcome-screen">
+        <h2>Masukkan Nama Anda</h2>
+        <input type="text" class="styled-input" id="username" placeholder="Nama Anda">
+        <button id="startQuiz">Mulai Quiz</button>
+    </div>
+
+    <div class="quiz-container" id="quiz-screen" style="display: none;">
+        <h1>Quiz Sederhana</h1>
+        <div id="question-container"></div>
+        <button id="prevQuestion" style="display: none;">Preview</button>
+        <button id="nextQuestion">Next</button>
+    </div>
+
+    <div class="quiz-container" id="result-screen" style="display: none;">
+        <h1>Hasil Quiz</h1>
+        <p id="result-name"></p>
+        <p id="result-score"></p>
+        <button id="restartQuiz">Main lagi</button>
+    </div>
+</body>
+</html>

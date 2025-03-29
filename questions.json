@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Ibu kota Indonesia adalah?",
+        "options": ["Jakarta", "Bandung", "Surabaya", "Medan"],
+        "answer": "Jakarta"
+    },
+    {
+        "question": "Hewan apa yang memiliki belalai?",
+        "options": ["Gajah", "Harimau", "Jerapah", "Zebra"],
+        "answer": "Gajah"
+    },
+    {
+        "question": "Neil Amstrong adalah manusia pertama yang tiba di Bulan. Dengan siapakah Neil Amstrong tiba di bulan ?", 
+        "options": ["Carol Knight", "Janet Shearon", "Rick Amstrong", "Slamet"],
+        "answer": "Slamet"
+    },
+    {
+        "question": "Sedotan apa yang ramah lingkungan ?", 
+        "options": ["Sedotan besi", "Sedotan Kertas", "Sedotan Plastik", "Sedotan Ramah Lingkungan"],
+        "answer": "Sedotan Ramah Lingkungan"
+    },
+    {
+        "question": "Siapakah manusia terganteng di Bumi ?", 
+        "options": ["Ariel Noah", "Song Joong Ki", "Teddy Juned", "Muhammad Fuad Eko Poernomo"],
+        "answer": "Muhammad Fuad Eko Poernomo"
+    }
+]
