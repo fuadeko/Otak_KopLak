@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
       currentQuestionIndex++;
       loadQuestion();
     } else {
+      console.log("<<<<");
+
       calculateScore();
     }
   });
@@ -107,7 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     leaderboard.push(dataPemain);
 
-    localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+    leaderboard.sort((a, b) => b.score - a.score);
+
+    let finalLeaderboard = leaderboard.slice(0, 3);
+
+    localStorage.setItem("leaderboard", JSON.stringify(finalLeaderboard));
 
     quizScreen.style.display = "none";
     resultScreen.style.display = "block";
