@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #fff);
   margin: 0;
   padding: 0;
@@ -18,12 +18,15 @@ body {
   max-width: 500px;
 }
 
-h1, h2, h4 {
+h1,
+h2,
+h4 {
   text-align: center;
   color: #00796b;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 10px;
   margin-top: 1rem;
@@ -58,7 +61,9 @@ button:hover {
   margin-top: 2rem;
 }
 
-#result-screen, #quiz-screen, #lb-screen {
+#result-screen,
+#quiz-screen,
+#lb-screen {
   display: none;
 }
 
@@ -66,17 +71,18 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: center;
 }
 
 th {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -93,4 +99,28 @@ tr:hover {
   .container {
     padding: 1rem;
   }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4b6bfb;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.score-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 20px;
 }

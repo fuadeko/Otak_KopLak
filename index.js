@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const showLbButton = document.getElementById("showLb");
   const lb__data = document.getElementById("lb-data");
   const lbScreen = document.getElementById("lb-screen");
+  const progressBar = document.getElementById("progress");
+  const currentScoreDisplay = document.getElementById("current-score");
 
   let questions = [];
   let currentQuestionIndex = 0;
@@ -70,12 +72,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentQuestionIndex < questions.length - 1) {
       currentQuestionIndex++;
       loadQuestion();
-    } else {
-      console.log("<<<<");
 
+      // Progress Bar
+      const progressPercentage =
+        (currentQuestionIndex / questions.length) * 100;
+      progressBar.style.width = `${progressPercentage}%`;
+      console.log("???");
+
+      currentScoreDisplay.textContent = calculateScore();
+    } else {
       calculateScore();
+      leaderboard();
     }
   });
+
+  // Score Point
+  // function updateScoreDisplay(score) {
+  //   currentScoreDisplay.textContent = score;
+  //   // finalScoreDisplay.textContent = score;
+  // }
 
   prevButton.addEventListener("click", () => {
     if (currentQuestionIndex > 0) {
@@ -90,14 +105,20 @@ document.addEventListener("DOMContentLoaded", () => {
       currentQuestionIndex === questions.length - 1 ? "Finish" : "Next";
   }
 
+  // SCORE CALCULATION
   function calculateScore() {
     let score = 0;
     questions.forEach((q, index) => {
       if (userAnswers[index] === q.answer) {
         score++;
+        // currentScoreDisplay.textContent = score;
       }
     });
+    return score;
+  }
 
+  function leaderboard() {
+    let score = calculateScore();
     let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
     // Save score data in local storage for user after finish the game
@@ -111,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     leaderboard.sort((a, b) => b.score - a.score);
 
-    let finalLeaderboard = leaderboard.slice(0, 3);
+    let finalLeaderboard = leaderboard.slice(0, 10);
 
     localStorage.setItem("leaderboard", JSON.stringify(finalLeaderboard));
 
@@ -119,6 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
     resultScreen.style.display = "block";
     resultName.textContent = `Nama: ${username}`;
     resultScore.textContent = `Skor Anda: ${score} dari ${questions.length}`;
+
+    return score;
   }
 
   restartButton.addEventListener("click", () => {
