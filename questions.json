@@ -6,17 +6,17 @@
     },
     {
         "question": "Hewan apa yang memiliki belalai?",
-        "options": ["Gajah", "Harimau", "Jerapah", "Zebra"],
+        "options": ["Harimau", "Gajah", "Jerapah", "Zebra"],
         "answer": "Gajah"
     },
     {
         "question": "Neil Amstrong adalah manusia pertama yang tiba di Bulan. Dengan siapakah Neil Amstrong tiba di bulan ?", 
-        "options": ["Carol Knight", "Janet Shearon", "Rick Amstrong", "Slamet"],
+        "options": ["Carol Knight", "Janet Shearon", "Slamet", "Rick Amstrong"],
         "answer": "Slamet"
     },
     {
         "question": "Sedotan apa yang suka tersenyum ?", 
-        "options": ["Sedotan besi", "Sedotan Kertas", "Sedotan Plastik", "Sedotan Ramah Lingkungan"],
+        "options": ["Sedotan besi", "Sedotan Ramah Lingkungan", "Sedotan Plastik", "Sedotan Kertas"],
         "answer": "Sedotan Ramah Lingkungan"
     },
     {
